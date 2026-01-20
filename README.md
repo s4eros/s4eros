@@ -1,2 +1,5 @@
-# About Me
+# About Me:
+💻 Administrador de Sistemas 
 
+# 📬 Contact:
+[![LinkedIn](https://img.shields.io/badge/Conectemos_en_LinkedIn-0A66C2?logo=linkedin)](https://www.linkedin.com/in/arnau-saez-freixenet-641536372/)
