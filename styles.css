@@ -404,6 +404,110 @@ section:last-child {
     color: var(--text-light);
 }
 
+/* Contact Buttons */
+.contact-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2.5rem 2rem;
+    background: rgba(42, 47, 66, 0.6);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-light);
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 212, 255, 0.1);
+    transition: left 0.3s ease;
+    z-index: 0;
+}
+
+.contact-btn:hover::before {
+    left: 100%;
+}
+
+.contact-btn:hover {
+    border-color: var(--primary-accent);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+}
+
+.contact-btn.linkedin-btn:hover {
+    border-color: #0a66c2;
+    box-shadow: 0 15px 40px rgba(10, 102, 194, 0.2);
+}
+
+.contact-btn.github-btn:hover {
+    border-color: #ffffff;
+    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+}
+
+.contact-btn.email-btn:hover {
+    border-color: var(--secondary-accent);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
+}
+
+.btn-icon {
+    font-size: 3rem;
+    display: block;
+    position: relative;
+    z-index: 1;
+    animation: float 3s ease-in-out infinite;
+}
+
+.btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-text strong {
+    font-size: 1.3rem;
+    color: var(--primary-accent);
+    font-weight: 700;
+}
+
+.btn-text small {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.contact-btn:hover .btn-text strong {
+    color: var(--secondary-accent);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 .contact-methods {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
